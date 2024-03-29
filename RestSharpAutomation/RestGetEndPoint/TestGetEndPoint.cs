@@ -209,7 +209,7 @@ namespace RestSharpAutomation.RestGetEndPoint
             };
 
             RestClientHelper restClientHelper = new RestClientHelper();
-            string getUrl = "http://localhost:1082/laptop-bag/webapi/api/all";
+            string getUrl = "http://localhost:8080/laptop-bag/webapi/api/all";
             IRestResponse restResponse = restClientHelper.PerformGetRequest(getUrl, headers);
             Assert.AreEqual(200, (int)restResponse.StatusCode);
             Assert.IsNotNull(restResponse.Content, "Content is Null/Empty");

@@ -3,10 +3,6 @@ using RestSharp;
 using RestSharpAutomation.JiraAPI.Request;
 using RestSharpAutomation.JiraAPI.Response;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RestSharpAutomation.JiraAPI
 {
@@ -20,13 +16,13 @@ namespace RestSharpAutomation.JiraAPI
         {
             JiraLogin jiraLogin = new JiraLogin()
             {
-                username = "rahul",
-                password = "admin@1234#"
+                username = "taras.mokretsky",
+                password = "6416"
             };
 
             IRestClient client = new RestClient()
             {
-                BaseUrl = new Uri("http://localhost:9191")
+                BaseUrl = new Uri("http://localhost:8090")
             };
 
             IRestRequest request = new RestRequest()
@@ -39,8 +35,6 @@ namespace RestSharpAutomation.JiraAPI
 
             var response = client.Post<LoginResponse>(request);
             Console.WriteLine(response.Data);
-
-           
         }
     }
 }

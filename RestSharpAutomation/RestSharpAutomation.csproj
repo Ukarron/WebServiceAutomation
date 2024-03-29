@@ -419,7 +419,6 @@
     <Compile Include="DropBoxAPI\ListFolderModel\RootObject.cs" />
     <Compile Include="DropBoxAPI\ListFolderModel\SharingInfo.cs" />
     <Compile Include="DropBoxAPI\TestDropBoxAPI.cs" />
-    <Compile Include="DropBoxAPI\TestGenerateToken.cs" />
     <Compile Include="HelperClass\Request\RestClientHelper.cs" />
     <Compile Include="JiraAPI\Request\CreateProjectPayload.cs" />
     <Compile Include="JiraAPI\Request\JiraLogin.cs" />
@@ -433,7 +432,6 @@
     <Compile Include="QueryParameter\QueryParameter.cs" />
     <Compile Include="RestDeleteEndpoint\TestDeleteEndPoint.cs" />
     <Compile Include="RestGetEndPoint\TestGetEndPoint.cs" />
-    <Compile Include="RestPostEndpoint\FileUploadEndPoint.cs" />
     <Compile Include="RestPostEndpoint\TestPostEndPoint.cs" />
     <Compile Include="RestPutEndPoint\TestPutEndPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

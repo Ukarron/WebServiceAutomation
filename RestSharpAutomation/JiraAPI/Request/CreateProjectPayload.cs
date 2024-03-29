@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RestSharpAutomation.JiraAPI.Request
 {
@@ -13,7 +9,7 @@ namespace RestSharpAutomation.JiraAPI.Request
         public string projectTypeKey { get; set; } = "business";
         public string projectTemplateKey { get; set; } = "com.atlassian.jira-core-project-templates:jira-core-project-management";
         public string description { get; set; } = "Example Project description";
-        public string lead { get; set; } = "rahul";
+        public string lead { get; set; } = "taras.mokretsky";
         public string url { get; set; } = "http://atlassian.com";
         public string assigneeType { get; set; } = "PROJECT_LEAD";
         public int avatarId { get; set; } = 10324;

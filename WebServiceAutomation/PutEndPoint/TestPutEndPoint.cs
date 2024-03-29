@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,8 +84,6 @@ namespace WebServiceAutomation.PutEndPoint
 
             Laptop xmlObj = ResponseDataHelper.DeserializeXmlResponse<Laptop>(restResponse.ResponseContent);
             Assert.IsTrue(xmlObj.Features.Feature.Contains("1 TB of SSD"), "Item Not found");
-
-
         }
 
         [TestMethod]

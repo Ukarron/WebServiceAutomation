@@ -3,11 +3,6 @@ using RestSharp;
 using RestSharpAutomation.JiraAPI.Request;
 using RestSharpAutomation.JiraAPI.Response;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NHamcrest.Core;
 
 namespace RestSharpAutomation.JiraAPI
 {
@@ -32,7 +27,7 @@ namespace RestSharpAutomation.JiraAPI
         {
             client = new RestClient()
             {
-                BaseUrl = new Uri("http://localhost:9191")
+                BaseUrl = new Uri("http://localhost:8090")
             };
             IRestRequest request = new RestRequest()
             {
@@ -40,8 +35,8 @@ namespace RestSharpAutomation.JiraAPI
             };
             JiraLogin jiraLogin = new JiraLogin()
             {
-                username = "rahul",
-                password = "admin@1234#"
+                username = "taras.mokretsky",
+                password = "6416"
             };
             request.RequestFormat = DataFormat.Json;
             request.AddJsonBody(jiraLogin);
@@ -76,8 +71,6 @@ namespace RestSharpAutomation.JiraAPI
             restRequest.AddCookie(LoginResponse.Data.session.name, LoginResponse.Data.session.value);
             var response = client.Post<CreateProjectResponse>(restRequest);
             Assert.AreEqual(201, (int)response.StatusCode);
-            
-         
         }
 
         [TestMethod]
@@ -93,6 +86,5 @@ namespace RestSharpAutomation.JiraAPI
             Assert.IsNotNull(response.Data);
             Console.WriteLine(response.Content);
         }
-
     }
 }

@@ -25,7 +25,6 @@ namespace WebServiceAutomation.GetEndPoint
         private string secureGetUrl = "http://localhost:8080/laptop-bag/webapi/secure/all";
         private string delayget = "http://localhost:8080/laptop-bag/webapi/delay/all";
 
-
         [TestMethod]
         public void TestGetAllEndPoint()
         {
@@ -35,8 +34,6 @@ namespace WebServiceAutomation.GetEndPoint
             httpClient.GetAsync(getUrl);
             // Close the connection
             httpClient.Dispose();
-
-
         }
 
         [TestMethod]
@@ -132,10 +129,8 @@ namespace WebServiceAutomation.GetEndPoint
             string data = responseData.Result;
             Console.WriteLine(data);
 
-
             // Close the connection
             httpClient.Dispose();
-
         }
 
         [TestMethod]
@@ -160,10 +155,8 @@ namespace WebServiceAutomation.GetEndPoint
             string data = responseData.Result;
             Console.WriteLine(data);
 
-
             // Close the connection
             httpClient.Dispose();
-
         }
 
         [TestMethod]
@@ -190,10 +183,8 @@ namespace WebServiceAutomation.GetEndPoint
             string data = responseData.Result;
             Console.WriteLine(data);
 
-
             // Close the connection
             httpClient.Dispose();
-
         }
 
         [TestMethod]
@@ -220,7 +211,6 @@ namespace WebServiceAutomation.GetEndPoint
             Task<string> responseData = responseContent.ReadAsStringAsync();
             string data = responseData.Result;
             Console.WriteLine(data);
-
 
             // Close the connection
             httpClient.Dispose();
@@ -256,11 +246,8 @@ namespace WebServiceAutomation.GetEndPoint
 
                         RestResponse restResponse = new RestResponse((int)statusCode, responseData.Result);
                         Console.WriteLine(restResponse.ToString());
-
-
                     }
                 }
-
             }
         }
 
@@ -298,7 +285,6 @@ namespace WebServiceAutomation.GetEndPoint
 
                         List<JsonRootObject> jsonRootObject = JsonConvert.DeserializeObject<List<JsonRootObject>>(restResponse.ResponseContent);
                         Console.WriteLine(jsonRootObject[0].ToString());
-
                     }
                 }
 
@@ -359,13 +345,10 @@ namespace WebServiceAutomation.GetEndPoint
 
                         //4th
                         Assert.AreEqual("Alienware", xmlData.Laptop[0].BrandName);
-                       
                     }
                 }
-
             }
         }
-
 
         [TestMethod]
         public void GetUsingHelperMethod()
@@ -381,8 +364,6 @@ namespace WebServiceAutomation.GetEndPoint
             List<JsonRootObject> jsonData = ResponseDataHelper.DeserializeJsonResponse<List<JsonRootObject>>(restResponse.ResponseContent);
 
             Console.WriteLine(jsonData.ToString());
-
-
         }
 
         [TestMethod]
@@ -426,7 +407,6 @@ namespace WebServiceAutomation.GetEndPoint
         [TestMethod]
         public void TestGetEndPoint_Async()
         {
-
             Task t1 = new Task(GetEndPoint());
             t1.Start();
             Task t2 = new Task(GetEndPoint());
@@ -467,10 +447,5 @@ namespace WebServiceAutomation.GetEndPoint
                 Assert.AreEqual(201, restResponse.StatusCode);
             });
         }
-
-
     }
-
-    
-
 }

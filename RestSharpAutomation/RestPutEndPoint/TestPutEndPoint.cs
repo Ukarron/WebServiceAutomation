@@ -3,9 +3,6 @@ using RestSharp;
 using RestSharpAutomation.HelperClass.Request;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebServiceAutomation.Model.JsonModel;
 using WebServiceAutomation.Model.XmlModel;
 
@@ -48,7 +45,7 @@ namespace RestSharpAutomation.RestPutEndPoint
             };
 
             RestClientHelper restClientHelper = new RestClientHelper();
-            IRestResponse restResponse = restClientHelper.PerformPostRequest(postUrl, headers, jsonData, RestSharp.DataFormat.Json);
+            IRestResponse restResponse = restClientHelper.PerformPostRequest(postUrl, headers, jsonData, DataFormat.Json);
             Assert.AreEqual(200, (int)restResponse.StatusCode);
 
             jsonData = "{" +
@@ -114,7 +111,7 @@ namespace RestSharpAutomation.RestPutEndPoint
             };
 
             RestClientHelper restClientHelper = new RestClientHelper();
-            IRestResponse restResponse = restClientHelper.PerformPostRequest(postUrl, headers, xmlData, RestSharp.DataFormat.Xml);
+            IRestResponse restResponse = restClientHelper.PerformPostRequest(postUrl, headers, xmlData, DataFormat.Xml);
             Assert.AreEqual(200, (int)restResponse.StatusCode);
 
             xmlData = "<Laptop>" +
@@ -180,7 +177,7 @@ namespace RestSharpAutomation.RestPutEndPoint
             };
 
             RestClientHelper restClientHelper = new RestClientHelper();
-            IRestResponse restResponse = restClientHelper.PerformPostRequest(postUrl, headers, xmlData, RestSharp.DataFormat.Xml);
+            IRestResponse restResponse = restClientHelper.PerformPostRequest(postUrl, headers, xmlData, DataFormat.Xml);
             Assert.AreEqual(200, (int)restResponse.StatusCode);
 
             xmlData = "<Laptop>" +
@@ -208,6 +205,5 @@ namespace RestSharpAutomation.RestPutEndPoint
             Assert.AreEqual(200, (int)restResponse2.StatusCode);
             Assert.IsTrue(restResponse2.Data.Features.Feature.Contains("Updated Feature"), "Feature did not got updated");
         }
-
     }
 }

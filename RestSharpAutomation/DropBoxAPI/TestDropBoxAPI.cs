@@ -1,12 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
-using RestSharp.Authenticators;
-using RestSharp.Authenticators.OAuth;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RestSharpAutomation.DropBoxAPI
@@ -17,7 +11,7 @@ namespace RestSharpAutomation.DropBoxAPI
         private const string ListEndPointUrl = "https://api.dropboxapi.com/2/files/list_folder";
         private const string CreateEndPointUrl = "https://api.dropboxapi.com/2/files/create_folder_v2";
         private const string DownloadEndPointUrl = "https://content.dropboxapi.com/2/files/download";
-        private const string AccessToken = "6nPT8TAQ09kAAAAAAAAAo17kpWpadujQQBsdIbdbS5YSv-e_lOxFuZKOrddWGEIm";
+        private const string AccessToken = "sl.ByX8v3WgteCU-PQaibLrdcXl7FoYXzRSAjwaVOV70ZGNUwkNdk56ONdXZJrkC8EnfyR257OqII612MWuxhFsgjnkB8a0qhoa87dY7rXq2BkUmYQ4zreeXZL7wOcEZ9RegtdLszJyCSbyG4erIU-ReXg";
         
         [TestMethod]
         public void TestListFolder()
@@ -36,9 +30,8 @@ namespace RestSharpAutomation.DropBoxAPI
             request.RequestFormat = DataFormat.Json;
             request.AddBody(body);
 
-            var response = client.Post<RestSharpAutomation.DropBoxAPI.ListFolderModel.RootObject>(request);
+            var response = client.Post<ListFolderModel.RootObject>(request);
             Assert.AreEqual(200, (int)response.StatusCode);
-
         }
 
         [TestMethod]
@@ -63,7 +56,7 @@ namespace RestSharpAutomation.DropBoxAPI
         [TestMethod]
         public void TestDownloadFile()
         {
-            string location = "{\"path\": \"/Book.xlsx\"}";
+            string location = "{\"path\": \"/Delegates and lambda expressions.ppt\"}";
             IRestClient client = new RestClient();
             IRestRequest request = new RestRequest()
             {
@@ -74,14 +67,14 @@ namespace RestSharpAutomation.DropBoxAPI
             request.AddHeader("Dropbox-API-Arg", location);
             request.RequestFormat = DataFormat.Json;
             var dataInByte = client.DownloadData(request);
-            File.WriteAllBytes("Test.xlsx", dataInByte);
+            File.WriteAllBytes("Delegates and lambda expressions.ppt", dataInByte);
         }
 
         [TestMethod]
         public void TestFileDownloadParaller()
         {
-            string locationOfFile1 = "{\"path\": \"/Part1.mp3\"}";
-            string locationOfFile2 = "{\"path\": \"/Video.mp4\"}";
+            string locationOfFile1 = "{\"path\": \"/Delegates and lambda expressions.ppt\"}";
+            string locationOfFile2 = "{\"path\": \"/Structs.zip\"}";
 
             IRestRequest file1 = new RestRequest()
             {
@@ -117,11 +110,9 @@ namespace RestSharpAutomation.DropBoxAPI
             task2.Wait();
 
             if(null != downloadDataFile1)
-                File.WriteAllBytes("Part1.mp3", downloadDataFile1);
+                File.WriteAllBytes("Delegates and lambda expressions.ppt", downloadDataFile1);
             if(null != downloadDataFile2)
-                File.WriteAllBytes("Video.mp4", downloadDataFile2);
-
+                File.WriteAllBytes("Structs.zip", downloadDataFile2);
         }
-
     }
 }
