@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceAutomation", "WebServiceAutomation\WebServiceAutomation.csproj", "{50E9C02D-5854-4C75-9FD8-38F370861C24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpAutomation", "RestSharpAutomation\RestSharpAutomation.csproj", "{B492C2AD-DB6A-471F-AF94-34397FC2427F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50E9C02D-5854-4C75-9FD8-38F370861C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E9C02D-5854-4C75-9FD8-38F370861C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E9C02D-5854-4C75-9FD8-38F370861C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E9C02D-5854-4C75-9FD8-38F370861C24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B492C2AD-DB6A-471F-AF94-34397FC2427F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B492C2AD-DB6A-471F-AF94-34397FC2427F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B492C2AD-DB6A-471F-AF94-34397FC2427F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B492C2AD-DB6A-471F-AF94-34397FC2427F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59623560-985F-4977-9ACA-4F771C7FD4FC}
+	EndGlobalSection
+EndGlobal
