@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceAutomation", "Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpAutomation", "RestSharpAutomation\RestSharpAutomation.csproj", "{B492C2AD-DB6A-471F-AF94-34397FC2427F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latest", "Latest\Latest.csproj", "{8A169D8A-2BF2-4E29-BE69-F9B9D07D6631}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B492C2AD-DB6A-471F-AF94-34397FC2427F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B492C2AD-DB6A-471F-AF94-34397FC2427F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B492C2AD-DB6A-471F-AF94-34397FC2427F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A169D8A-2BF2-4E29-BE69-F9B9D07D6631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A169D8A-2BF2-4E29-BE69-F9B9D07D6631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A169D8A-2BF2-4E29-BE69-F9B9D07D6631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A169D8A-2BF2-4E29-BE69-F9B9D07D6631}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

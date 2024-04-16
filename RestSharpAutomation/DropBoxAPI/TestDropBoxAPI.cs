@@ -11,7 +11,7 @@ namespace RestSharpAutomation.DropBoxAPI
         private const string ListEndPointUrl = "https://api.dropboxapi.com/2/files/list_folder";
         private const string CreateEndPointUrl = "https://api.dropboxapi.com/2/files/create_folder_v2";
         private const string DownloadEndPointUrl = "https://content.dropboxapi.com/2/files/download";
-        private const string AccessToken = "sl.ByX8v3WgteCU-PQaibLrdcXl7FoYXzRSAjwaVOV70ZGNUwkNdk56ONdXZJrkC8EnfyR257OqII612MWuxhFsgjnkB8a0qhoa87dY7rXq2BkUmYQ4zreeXZL7wOcEZ9RegtdLszJyCSbyG4erIU-ReXg";
+        private const string AccessToken = ""; //my access token
         
         [TestMethod]
         public void TestListFolder()
